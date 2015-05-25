@@ -22,9 +22,15 @@ var ProfileBox = React.createClass({
 
   render: function(){
     return (
-      <div>
+      <div style={{
+        cursor: "pointer",
+        display: "inline-block",
+        margin: "10px 20px",
+        background: "rgba(08,55,123,0.8)",
+        textAlign: "center"
+      }}>
         <ProfilePic onPicClick={this.updateAll}  data={this.state.data} />
-        <ProfileInfo data={this.state.data} />
+        <ProfileInfo onInfoClick={this.updateAll} data={this.state.data} />
       </div>
     )
   }
@@ -32,7 +38,6 @@ var ProfileBox = React.createClass({
 
 
 var ProfilePic = React.createClass({
-
   updateState: function(){
     this.props.onPicClick();
   },
@@ -40,7 +45,7 @@ var ProfilePic = React.createClass({
   render: function(){
     return (
       <div>
-        <img style={{width: 100, height: 100}} src={this.props.data ? this.props.data.data.avatar : ""} onClick={this.updateState} />
+        <img style={{width: "100%"}} src={this.props.data ? this.props.data.data.avatar : ""} onClick={this.updateState} />
       </div>
     );
   }
@@ -48,10 +53,14 @@ var ProfilePic = React.createClass({
 
 
 var ProfileInfo = React.createClass({
+  updateState: function(){
+    this.props.onInfoClick();
+  },
+
   render: function(){
     return (
       <div>
-        <p >
+        <p onClick={this.updateState}>
           {this.props.data ? (this.props.data.data.first_name + " " + this.props.data.data.last_name) : ""}
         </p>
       </div>

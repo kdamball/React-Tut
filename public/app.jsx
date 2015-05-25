@@ -1,7 +1,10 @@
 var Profiles = React.createClass({
   render: function(){
     return (
-      <div>
+      <div style={{
+        display: "flex",
+        justifyContent: "center"
+      }}>
         <ProfileBox />
         <ProfileBox />
         <ProfileBox />
