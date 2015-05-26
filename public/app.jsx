@@ -5,9 +5,9 @@ var Profiles = React.createClass({
         display: "flex",
         justifyContent: "center"
       }}>
-        <ProfileBox />
-        <ProfileBox />
-        <ProfileBox />
+        {[1,2,3].map(function(e){
+          return <ProfileBox key={e} />
+        })}
       </div>
     )
   }
