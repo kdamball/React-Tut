@@ -1,11 +1,13 @@
 {
-  "name": "react-tutorial",
+  "name": "React Example",
   "version": "0.0.0",
-  "description": "Code from the React tutorial.",
+  "description": "",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.4.3",
-    "express": "^4.4.5"
+    "express": "^4.4.5",
+    "react": "^0.13.3",
+    "reactify": "^1.1.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -14,20 +16,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactjs/react-tutorial.git"
+    "url": "https://github.com/kdamball/React-Tut.git"
   },
   "keywords": [
     "react",
     "tutorial",
-    "comment",
     "example"
   ],
-  "author": "petehunt",
+  "author": "Kado Damball",
   "bugs": {
-    "url": "https://github.com/reactjs/react-tutorial/issues"
+    "url": "https://github.com/kdamball/React-Tut/issues"
   },
-  "homepage": "https://github.com/reactjs/react-tutorial",
-  "engines" : {
-    "node" : "0.12.x"
+  "homepage": "https://github.com/kdamball/React-Tut",
+  "engines": {
+    "node": "0.12.x"
   }
 }
