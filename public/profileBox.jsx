@@ -1,3 +1,5 @@
+var React = require('react');
+
 var ProfileBox = React.createClass({
 
   getInitialState: function(){
@@ -67,3 +69,5 @@ var ProfileInfo = React.createClass({
     )
   }
 });
+
+module.exports = ProfileBox;

@@ -1,3 +1,6 @@
+var React = require('react'),
+    ProfileBox = require('./ProfileBox.jsx');
+
 var Profiles = React.createClass({
   render: function(){
     return (
@@ -16,5 +19,5 @@ var Profiles = React.createClass({
 
 React.render(
   <Profiles />,
-  document.getElementById('content')
+  document.getElementById('content')  
 )
