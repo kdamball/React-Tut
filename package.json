@@ -1,5 +1,5 @@
 {
-  "name": "React Example",
+  "name": "React-Example",
   "version": "0.0.0",
   "description": "",
   "main": "server.js",
@@ -12,7 +12,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "browserify -t reactify public/app.js > public/main.js"
   },
   "repository": {
     "type": "git",
