@@ -6,11 +6,11 @@ var ProfileBox = React.createClass({
     return {data: false}
   },
 
-  updateAll: function(){
-    this.fetchUsers();
+  updateUser: function(){
+    this.fetchUser();
   },
 
-  fetchUsers: function(){
+  fetchUser: function(){
     return fetch("http://reqr.es/api/users/"+(Math.floor(Math.random()*12)+1))
       .then(function(res){return res.json()})
       .then(function(data){
@@ -19,7 +19,7 @@ var ProfileBox = React.createClass({
   },
 
   componentDidMount: function(){
-    this.fetchUsers();
+    this.fetchUser();
   },
 
   render: function(){
@@ -29,10 +29,12 @@ var ProfileBox = React.createClass({
         display: "inline-block",
         margin: "10px 20px",
         background: "rgba(08,55,123,0.8)",
-        textAlign: "center"
+        textAlign: "center",
+        minHeight: 120,
+        minWidth: 100
       }}>
-        <ProfilePic onPicClick={this.updateAll}  data={this.state.data} />
-        <ProfileInfo onInfoClick={this.updateAll} data={this.state.data} />
+        <ProfilePic onPicClick={this.updateUser}  data={this.state.data} />
+        <ProfileInfo onInfoClick={this.updateUser} data={this.state.data} />
       </div>
     )
   }
